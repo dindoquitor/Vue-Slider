@@ -57,3 +57,41 @@ i {
   background: #000;
   color: #fff;
 }
+
+.pagination {
+  position: absolute;
+  bottom: 24px;
+  width: 100%;
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+  align-items: center;
+}
+
+.pagination span {
+  cursor: pointer;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: #fff;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+}
+
+.pagination .active {
+  background-color: aqua;
+}
+
+.slide-enter-active,
+.slide-leave-active {
+  transition: opacity 0.7s ease-in-out;
+}
+
+.slide-enter-from,
+.slide-leave-to {
+  opacity: 0;
+}
+
+.slide-enter-to,
+.slide-leave-from {
+  opacity: 1;
+}
