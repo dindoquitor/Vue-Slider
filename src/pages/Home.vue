@@ -1,6 +1,13 @@
 <template>
   <div class="Home">
-    <Carousel class="carousel" v-slot="{ currentSlide }">
+    <Carousel
+      :navigation="true"
+      :pagination="true"
+      :startAutoPlay="true"
+      :timeout="10000"
+      class="carousel"
+      v-slot="{ currentSlide }"
+    >
       <Slide v-for="(slide, index) in carouselSlides" :key="index">
         <div v-show="currentSlide === index + 1" class="slide-info">
           <img :src="getImageUrl(slide)" alt="" />
